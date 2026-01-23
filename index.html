@@ -85,6 +85,8 @@
           </div>
           <div class="step-content">
             <div class="carousel-wrapper">
+              <button class="carousel-btn prev" aria-label="Precedente">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Successivo">&#8250;</button>
               <div class="carousel" id="carousel-1">
                 <div class="carousel-item">
                   <div class="screenshot-container">
@@ -128,15 +130,25 @@
             </p>
           </div>
           <div class="step-content">
-            <div
-              class="screenshot-container"
-              style="
-                max-width: 600px;
-                margin: 0 auto;
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-              "
-            >
-              <img src="assets/images/5.png" alt="Dashboard Staff e Cucina" />
+            <div class="carousel-wrapper">
+              <button class="carousel-btn prev" aria-label="Precedente">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Successivo">&#8250;</button>
+              <div class="carousel" id="carousel-2">
+                <div class="carousel-item">
+                  <div class="screenshot-container">
+                    <img src="assets/images/8.png" alt="Dashboard Staff e Cucina 1" />
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="screenshot-container">
+                    <img src="assets/images/9.png" alt="Dashboard Staff e Cucina 2" />
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-nav">
+                <div class="nav-dot active"></div>
+                <div class="nav-dot"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -153,6 +165,8 @@
           </div>
           <div class="step-content">
             <div class="carousel-wrapper">
+              <button class="carousel-btn prev" aria-label="Precedente">&#8249;</button>
+              <button class="carousel-btn next" aria-label="Successivo">&#8250;</button>
               <div class="carousel" id="carousel-3">
                 <div class="carousel-item">
                   <div class="screenshot-container">
@@ -228,32 +242,77 @@
     </footer>
 
     <script>
-      // Simple Carousel Dot Handler
-      document.querySelectorAll('.carousel').forEach((carousel) => {
-        const wrapper = carousel.closest('.carousel-wrapper');
-        const dots = wrapper.querySelectorAll('.nav-dot');
+      // Optimized Carousel Handler
+      document.querySelectorAll(".carousel").forEach((carousel) => {
+        const wrapper = carousel.closest(".carousel-wrapper");
+        const dots = wrapper.querySelectorAll(".nav-dot");
+        const items = carousel.querySelectorAll(".carousel-item");
+        const prevBtn = wrapper.querySelector(".prev");
+        const nextBtn = wrapper.querySelector(".next");
 
-        carousel.addEventListener('scroll', () => {
-          const scrollLeft = carousel.scrollLeft;
-          const itemWidth =
-            carousel.querySelector('.carousel-item').offsetWidth + 24; // width + gap
-          const index = Math.round(scrollLeft / itemWidth);
+        const updateDots = () => {
+          const carouselRect = carousel.getBoundingClientRect();
+          let maxVisibleWidth = 0;
+          let activeIndex = 0;
+
+          items.forEach((item, i) => {
+            const itemRect = item.getBoundingClientRect();
+            const visibleLeft = Math.max(carouselRect.left, itemRect.left);
+            const visibleRight = Math.min(carouselRect.right, itemRect.right);
+            const visibleWidth = Math.max(0, visibleRight - visibleLeft);
+
+            if (visibleWidth > maxVisibleWidth) {
+              maxVisibleWidth = visibleWidth;
+              activeIndex = i;
+            }
+          });
 
           dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === index);
+            dot.classList.toggle("active", i === activeIndex);
+          });
+        };
+
+        const scrollToIndex = (index) => {
+          const item = items[index];
+          if (!item) return;
+          const scrollPos = item.offsetLeft - carousel.offsetLeft;
+          carousel.scrollTo({
+            left: scrollPos,
+            behavior: "smooth",
+          });
+        };
+
+        carousel.addEventListener("scroll", updateDots);
+        window.addEventListener("resize", updateDots);
+
+        dots.forEach((dot, i) => {
+          dot.addEventListener("click", () => {
+            scrollToIndex(i);
           });
         });
 
-        dots.forEach((dot, i) => {
-          dot.addEventListener('click', () => {
-            const itemWidth =
-              carousel.querySelector('.carousel-item').offsetWidth + 24;
-            carousel.scrollTo({
-              left: i * itemWidth,
-              behavior: 'smooth',
-            });
+        if (prevBtn) {
+          prevBtn.addEventListener("click", () => {
+            const currentIndex = Array.from(dots).findIndex((dot) =>
+              dot.classList.contains("active")
+            );
+            if (currentIndex > 0) scrollToIndex(currentIndex - 1);
+            else scrollToIndex(items.length - 1);
           });
-        });
+        }
+
+        if (nextBtn) {
+          nextBtn.addEventListener("click", () => {
+            const currentIndex = Array.from(dots).findIndex((dot) =>
+              dot.classList.contains("active")
+            );
+            if (currentIndex < items.length - 1) scrollToIndex(currentIndex + 1);
+            else scrollToIndex(0);
+          });
+        }
+
+        // Initial check
+        updateDots();
       });
     </script>
   </body>

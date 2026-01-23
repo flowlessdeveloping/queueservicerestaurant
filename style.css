@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: var(--text-color);
 }
@@ -178,6 +178,42 @@ section {
   position: relative;
   width: 100%;
   margin-top: 2rem;
+  overflow: hidden; /* Prevent horizontal growth */
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--primary-color);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.carousel-btn:hover {
+  background: var(--white);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev {
+  left: 1rem;
+}
+
+.carousel-btn.next {
+  right: 1rem;
 }
 
 .carousel {
@@ -186,9 +222,11 @@ section {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  gap: 1.5rem;
-  padding: 1rem;
+  gap: 0;
+  padding: 0;
   scrollbar-width: none; /* Hide scrollbar Firefox */
+  position: relative;
+  width: 100%; /* Ensure it takes full width */
 }
 
 .carousel::-webkit-scrollbar {
@@ -196,17 +234,18 @@ section {
 }
 
 .carousel-item {
-  flex: 0 0 280px;
+  flex: 0 0 100%; /* Show only one image at a time */
   scroll-snap-align: center;
   transition: transform 0.3s ease;
 }
 
 .carousel-item:hover {
-  transform: scale(1.02);
+  transform: none; /* Disable scale to keep layout stable */
 }
 
 .screenshot-container {
-  width: 100%;
+  width: 90%; /* Center the image slightly within the 100% space */
+  margin: 1rem auto;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
@@ -245,10 +284,6 @@ section {
   .step {
     flex-direction: column !important;
     text-align: center;
-  }
-
-  .carousel-item {
-    flex: 0 0 240px;
   }
 }
 
