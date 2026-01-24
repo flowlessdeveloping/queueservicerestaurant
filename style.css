@@ -44,8 +44,20 @@ nav {
   gap: 1rem;
 }
 
+.log-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
 .logo-img {
   height: 40px;
+}
+
+.logo-main {
+  transform: scale(0.8);
 }
 
 .logo-text {
