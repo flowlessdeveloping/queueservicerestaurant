@@ -297,6 +297,11 @@ section {
     flex-direction: column !important;
     text-align: center;
   }
+  .logo-main {
+    transform: none; /* rimuove lo scale */
+    height: 40px;
+    width: auto; /* mantiene proporzioni se è un <img> */
+  }
 }
 
 @media (max-width: 768px) {
@@ -306,6 +311,11 @@ section {
     padding: 1rem;
   }
 
+  .logo-main {
+    transform: none; /* rimuove lo scale */
+    height: 40px;
+    width: auto; /* mantiene proporzioni se è un <img> */
+  }
   .nav-links {
     display: flex;
     flex-wrap: wrap;
