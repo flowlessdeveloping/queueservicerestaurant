@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
   <head>
     <meta charset="UTF-8" />
@@ -117,7 +117,7 @@
                 </div>
                 <div class="carousel-item">
                   <div class="screenshot-container">
-                    <img src="assets/images/4.png" alt="Pagamento Sicuro" />
+                    <img src="assets/images/4-2.png" alt="Pagamento Sicuro" />
                   </div>
                 </div>
               </div>
@@ -320,7 +320,7 @@
         if (prevBtn) {
           prevBtn.addEventListener("click", () => {
             const currentIndex = Array.from(dots).findIndex((dot) =>
-              dot.classList.contains("active")
+              dot.classList.contains("active"),
             );
             if (currentIndex > 0) scrollToIndex(currentIndex - 1);
             else scrollToIndex(items.length - 1);
@@ -330,7 +330,7 @@
         if (nextBtn) {
           nextBtn.addEventListener("click", () => {
             const currentIndex = Array.from(dots).findIndex((dot) =>
-              dot.classList.contains("active")
+              dot.classList.contains("active"),
             );
             if (currentIndex < items.length - 1)
               scrollToIndex(currentIndex + 1);
