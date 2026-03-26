@@ -42,6 +42,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 1rem;
+  justify-content: center;
 }
 
 .log-main {
@@ -57,7 +58,7 @@ nav {
 }
 
 .logo-main {
-  transform: scale(0.6);
+  transform: scale(0.5);
 }
 
 .logo-text {
