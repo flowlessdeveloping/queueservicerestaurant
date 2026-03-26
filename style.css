@@ -176,7 +176,7 @@ section {
 
 .step-content {
   flex: 1;
-  padding: 2rem;
+  padding: 0.2rem;
 }
 
 .step-number {
@@ -257,7 +257,7 @@ section {
 }
 
 .screenshot-container {
-  width: 90%; /* Center the image slightly within the 100% space */
+  width: 100%; /* Center the image slightly within the 100% space */
   margin: 1rem auto;
   border-radius: 20px;
   overflow: hidden;
