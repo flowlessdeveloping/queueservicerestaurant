@@ -313,6 +313,40 @@ section {
   display: block;
 }
 
+/* Table mode carousel container */
+.screenshot-container-table {
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  margin: 1rem auto;
+}
+
+/* Portrait images (qrtavolo.jpg, menu.png, cucina.png, tavoli.png, servizio1.png) */
+.img-table-portrait {
+  max-height: 460px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Landscape images (cucina2.png) */
+.img-table-landscape {
+  width: 100%;
+  height: auto;
+  max-height: 340px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 8px;
+}
+
 .carousel-nav {
   display: flex;
   justify-content: center;
