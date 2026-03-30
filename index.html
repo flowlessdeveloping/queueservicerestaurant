@@ -76,144 +76,324 @@
         </div>
       </section>
 
+      <!-- ===== SEZIONE COME FUNZIONA ===== -->
       <section id="how-it-works" class="how-it-works">
         <h2 class="section-title">Come funziona</h2>
 
-        <!-- Step 1 -->
-        <div class="step">
-          <div class="step-content">
-            <span class="step-number">01</span>
-            <h3>Il Cliente Ordina</h3>
-            <p>
-              Tramite l'app mobile o scansionando un QR code al tavolo, il
-              cliente sfoglia il menu digitale ed effettua l'ordine in pochi
-              secondi.
-            </p>
-          </div>
-          <div class="step-content">
-            <div class="carousel-wrapper">
-              <button class="carousel-btn prev" aria-label="Precedente">
-                &#8249;
-              </button>
-              <button class="carousel-btn next" aria-label="Successivo">
-                &#8250;
-              </button>
-              <div class="carousel" id="carousel-1">
-                <div class="carousel-item">
-                  <div class="screenshot-container">
-                    <img src="assets/images/1.png" alt="Scansione QR Code" />
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="screenshot-container">
-                    <img src="assets/images/2.png" alt="Menu Digitale" />
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="screenshot-container">
-                    <img src="assets/images/3.png" alt="Selezione Prodotto" />
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="screenshot-container">
-                    <img src="assets/images/4-2.png" alt="Pagamento Sicuro" />
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-nav">
-                <div class="nav-dot active"></div>
-                <div class="nav-dot"></div>
-                <div class="nav-dot"></div>
-                <div class="nav-dot"></div>
-              </div>
-            </div>
-          </div>
+        <!-- Tab switcher modalità -->
+        <div class="mode-tabs">
+          <button class="mode-tab active" data-mode="counter">
+            🏪 Ritiro al Banco
+          </button>
+          <button class="mode-tab" data-mode="table">
+            🍽️ Ordina dal Tavolo
+          </button>
         </div>
 
-        <!-- Step 2 -->
-        <div class="step">
-          <div class="step-content">
-            <span class="step-number">02</span>
-            <h3>Lo Staff Riceve</h3>
-            <p>
-              L'ordine appare immediatamente sullo schermo della cucina. Lo
-              staff può cambiare lo stato dell'ordine con un tocco.
-            </p>
-          </div>
-          <div class="step-content">
-            <div class="carousel-wrapper">
-              <button class="carousel-btn prev" aria-label="Precedente">
-                &#8249;
-              </button>
-              <button class="carousel-btn next" aria-label="Successivo">
-                &#8250;
-              </button>
-              <div class="carousel" id="carousel-2">
-                <div class="carousel-item">
-                  <div class="screenshot-container">
-                    <img
-                      src="assets/images/8.png"
-                      alt="Dashboard Staff e Cucina 1"
-                    />
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="screenshot-container">
-                    <img
-                      src="assets/images/9.png"
-                      alt="Dashboard Staff e Cucina 2"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-nav">
-                <div class="nav-dot active"></div>
-                <div class="nav-dot"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!-- ===== MODALITÀ: RITIRO AL BANCO ===== -->
+        <div class="mode-panel active" id="mode-counter">
 
-        <!-- Step 3 -->
-        <div class="step">
-          <div class="step-content">
-            <span class="step-number">03</span>
-            <h3>Ritiro Immediato</h3>
-            <p>
-              Il cliente riceve una notifica quando il cibo è pronto. Basta
-              presentarsi al banco e ritirare, senza fila!
-            </p>
-          </div>
-          <div class="step-content">
-            <div class="carousel-wrapper">
-              <button class="carousel-btn prev" aria-label="Precedente">
-                &#8249;
-              </button>
-              <button class="carousel-btn next" aria-label="Successivo">
-                &#8250;
-              </button>
-              <div class="carousel" id="carousel-3">
-                <div class="carousel-item">
-                  <div class="screenshot-container">
-                    <img
-                      src="assets/images/6.png"
-                      alt="Ordine in Preparazione"
-                    />
+          <!-- Step 1 -->
+          <div class="step">
+            <div class="step-content">
+              <span class="step-number">01</span>
+              <h3>Il Cliente Ordina</h3>
+              <p>
+                Tramite l'app mobile o scansionando un QR code al banco, il
+                cliente sfoglia il menu digitale ed effettua l'ordine in pochi
+                secondi.
+              </p>
+            </div>
+            <div class="step-content">
+              <div class="carousel-wrapper">
+                <button class="carousel-btn prev" aria-label="Precedente">
+                  &#8249;
+                </button>
+                <button class="carousel-btn next" aria-label="Successivo">
+                  &#8250;
+                </button>
+                <div class="carousel" id="carousel-1">
+                  <div class="carousel-item">
+                    <div class="screenshot-container">
+                      <img src="assets/images/1.png" alt="Scansione QR Code" />
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="screenshot-container">
+                      <img src="assets/images/2.png" alt="Menu Digitale" />
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="screenshot-container">
+                      <img src="assets/images/3.png" alt="Selezione Prodotto" />
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="screenshot-container">
+                      <img src="assets/images/4-2.png" alt="Pagamento Sicuro" />
+                    </div>
                   </div>
                 </div>
-                <div class="carousel-item">
-                  <div class="screenshot-container">
-                    <img src="assets/images/7.png" alt="Ordine Pronto" />
-                  </div>
+                <div class="carousel-nav">
+                  <div class="nav-dot active"></div>
+                  <div class="nav-dot"></div>
+                  <div class="nav-dot"></div>
+                  <div class="nav-dot"></div>
                 </div>
-              </div>
-              <div class="carousel-nav">
-                <div class="nav-dot active"></div>
-                <div class="nav-dot"></div>
               </div>
             </div>
           </div>
+
+          <!-- Step 2 -->
+          <div class="step">
+            <div class="step-content">
+              <span class="step-number">02</span>
+              <h3>Lo Staff Riceve</h3>
+              <p>
+                L'ordine appare immediatamente sullo schermo della cucina. Lo
+                staff può cambiare lo stato dell'ordine con un tocco.
+              </p>
+            </div>
+            <div class="step-content">
+              <div class="carousel-wrapper">
+                <button class="carousel-btn prev" aria-label="Precedente">
+                  &#8249;
+                </button>
+                <button class="carousel-btn next" aria-label="Successivo">
+                  &#8250;
+                </button>
+                <div class="carousel" id="carousel-2">
+                  <div class="carousel-item">
+                    <div class="screenshot-container">
+                      <img
+                        src="assets/images/8.png"
+                        alt="Dashboard Staff e Cucina 1"
+                      />
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="screenshot-container">
+                      <img
+                        src="assets/images/9.png"
+                        alt="Dashboard Staff e Cucina 2"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-nav">
+                  <div class="nav-dot active"></div>
+                  <div class="nav-dot"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step">
+            <div class="step-content">
+              <span class="step-number">03</span>
+              <h3>Ritiro Immediato</h3>
+              <p>
+                Il cliente riceve una notifica quando il cibo è pronto. Basta
+                presentarsi al banco e ritirare, senza fila!
+              </p>
+            </div>
+            <div class="step-content">
+              <div class="carousel-wrapper">
+                <button class="carousel-btn prev" aria-label="Precedente">
+                  &#8249;
+                </button>
+                <button class="carousel-btn next" aria-label="Successivo">
+                  &#8250;
+                </button>
+                <div class="carousel" id="carousel-3">
+                  <div class="carousel-item">
+                    <div class="screenshot-container">
+                      <img
+                        src="assets/images/6.png"
+                        alt="Ordine in Preparazione"
+                      />
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="screenshot-container">
+                      <img src="assets/images/7.png" alt="Ordine Pronto" />
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-nav">
+                  <div class="nav-dot active"></div>
+                  <div class="nav-dot"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
+        <!-- fine mode-counter -->
+
+        <!-- ===== MODALITÀ: ORDINA DAL TAVOLO ===== -->
+        <div class="mode-panel" id="mode-table">
+
+          <!-- Step 1 -->
+          <div class="step">
+            <div class="step-content">
+              <span class="step-number">01</span>
+              <h3>Scansiona il QR al Tavolo</h3>
+              <p>
+                Il cliente inquadra il QR code posizionato sul tavolo con la
+                fotocamera dello smartphone: nessuna app da scaricare, si apre
+                direttamente il menu digitale del locale.
+              </p>
+            </div>
+            <div class="step-content">
+              <div class="carousel-wrapper">
+                <button class="carousel-btn prev" aria-label="Precedente">
+                  &#8249;
+                </button>
+                <button class="carousel-btn next" aria-label="Successivo">
+                  &#8250;
+                </button>
+                <div class="carousel" id="carousel-t1">
+                  <div class="carousel-item">
+                    <div class="screenshot-container">
+                      <img src="assets/images/1.png" alt="QR Code al Tavolo" />
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="screenshot-container">
+                      <img src="assets/images/2.png" alt="Menu Digitale al Tavolo" />
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="screenshot-container">
+                      <img src="assets/images/3.png" alt="Selezione dal Menu" />
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-nav">
+                  <div class="nav-dot active"></div>
+                  <div class="nav-dot"></div>
+                  <div class="nav-dot"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step">
+            <div class="step-content">
+              <span class="step-number">02</span>
+              <h3>Ordina e Paga dal Telefono</h3>
+              <p>
+                Il cliente sceglie i piatti, li aggiunge al carrello e completa
+                il pagamento direttamente dallo smartphone — Carta, Apple Pay o
+                Google Pay. L'ordine parte subito, senza aspettare il cameriere.
+              </p>
+            </div>
+            <div class="step-content">
+              <div class="carousel-wrapper">
+                <button class="carousel-btn prev" aria-label="Precedente">
+                  &#8249;
+                </button>
+                <button class="carousel-btn next" aria-label="Successivo">
+                  &#8250;
+                </button>
+                <div class="carousel" id="carousel-t2">
+                  <div class="carousel-item">
+                    <div class="screenshot-container">
+                      <img src="assets/images/4-2.png" alt="Pagamento dal Tavolo" />
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-nav">
+                  <div class="nav-dot active"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step">
+            <div class="step-content">
+              <span class="step-number">03</span>
+              <h3>La Cucina Prepara</h3>
+              <p>
+                L'ordine arriva istantaneamente sul display di cucina con il
+                numero del tavolo. Lo staff vede subito cosa preparare e può
+                aggiornare lo stato con un tocco.
+              </p>
+            </div>
+            <div class="step-content">
+              <div class="carousel-wrapper">
+                <button class="carousel-btn prev" aria-label="Precedente">
+                  &#8249;
+                </button>
+                <button class="carousel-btn next" aria-label="Successivo">
+                  &#8250;
+                </button>
+                <div class="carousel" id="carousel-t3">
+                  <div class="carousel-item">
+                    <div class="screenshot-container">
+                      <img src="assets/images/8.png" alt="KDS Cucina Tavolo 1" />
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="screenshot-container">
+                      <img src="assets/images/9.png" alt="KDS Cucina Tavolo 2" />
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-nav">
+                  <div class="nav-dot active"></div>
+                  <div class="nav-dot"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step">
+            <div class="step-content">
+              <span class="step-number">04</span>
+              <h3>Servizio al Tavolo</h3>
+              <p>
+                Quando il piatto è pronto, lo staff lo porta direttamente al
+                tavolo. Il cliente riceve anche una notifica sul telefono —
+                nessuna confusione, nessuna attesa inutile.
+              </p>
+            </div>
+            <div class="step-content">
+              <div class="carousel-wrapper">
+                <button class="carousel-btn prev" aria-label="Precedente">
+                  &#8249;
+                </button>
+                <button class="carousel-btn next" aria-label="Successivo">
+                  &#8250;
+                </button>
+                <div class="carousel" id="carousel-t4">
+                  <div class="carousel-item">
+                    <div class="screenshot-container">
+                      <img src="assets/images/6.png" alt="Ordine in Preparazione Tavolo" />
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="screenshot-container">
+                      <img src="assets/images/7.png" alt="Pronto per il Tavolo" />
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-nav">
+                  <div class="nav-dot active"></div>
+                  <div class="nav-dot"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- fine mode-table -->
+
       </section>
 
       <section id="contact">
@@ -267,7 +447,24 @@
     </footer>
 
     <script>
-      // Optimized Carousel Handler
+      // ===== MODE TABS =====
+      document.querySelectorAll(".mode-tab").forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const mode = tab.dataset.mode;
+
+          document.querySelectorAll(".mode-tab").forEach((t) =>
+            t.classList.remove("active")
+          );
+          document.querySelectorAll(".mode-panel").forEach((p) =>
+            p.classList.remove("active")
+          );
+
+          tab.classList.add("active");
+          document.getElementById("mode-" + mode).classList.add("active");
+        });
+      });
+
+      // ===== CAROUSEL HANDLER =====
       document.querySelectorAll(".carousel").forEach((carousel) => {
         const wrapper = carousel.closest(".carousel-wrapper");
         const dots = wrapper.querySelectorAll(".nav-dot");
@@ -319,7 +516,7 @@
         if (prevBtn) {
           prevBtn.addEventListener("click", () => {
             const currentIndex = Array.from(dots).findIndex((dot) =>
-              dot.classList.contains("active"),
+              dot.classList.contains("active")
             );
             if (currentIndex > 0) scrollToIndex(currentIndex - 1);
             else scrollToIndex(items.length - 1);
@@ -329,7 +526,7 @@
         if (nextBtn) {
           nextBtn.addEventListener("click", () => {
             const currentIndex = Array.from(dots).findIndex((dot) =>
-              dot.classList.contains("active"),
+              dot.classList.contains("active")
             );
             if (currentIndex < items.length - 1)
               scrollToIndex(currentIndex + 1);
@@ -337,7 +534,6 @@
           });
         }
 
-        // Initial check
         updateDots();
       });
     </script>
