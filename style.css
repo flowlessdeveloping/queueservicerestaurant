@@ -186,6 +186,47 @@ section {
   opacity: 0.2;
 }
 
+/* ===== MODE TABS ===== */
+.mode-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.mode-tab {
+  background: none;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.mode-tab:hover {
+  background-color: var(--primary-light);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.mode-tab.active {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* ===== MODE PANELS ===== */
+.mode-panel {
+  display: none;
+}
+
+.mode-panel.active {
+  display: block;
+}
+
 /* Carousel Styles */
 .carousel-wrapper {
   position: relative;
@@ -335,6 +376,11 @@ section {
 
   .hero {
     padding: 5rem 1rem;
+  }
+
+  .mode-tab {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
   }
 }
 
