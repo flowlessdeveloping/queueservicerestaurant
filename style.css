@@ -359,7 +359,7 @@ section {
   }
 
   .logo-main {
-    height: 40px;
+    height: 80px;
     width: auto; /* mantiene proporzioni se è un <img> */
   }
   .nav-links {
