@@ -54,11 +54,14 @@ nav {
 }
 
 .logo-img {
-  height: 40px;
+  height: 50px;
+  width: auto;
 }
 
 .logo-main {
-  transform: scale(0.5);
+  transform: scale(2.5);
+  height: 150px;
+  width: auto;
 }
 
 .logo-text {
@@ -343,7 +346,6 @@ section {
     text-align: center;
   }
   .logo-main {
-    transform: none; /* rimuove lo scale */
     height: 40px;
     width: auto; /* mantiene proporzioni se è un <img> */
   }
@@ -357,7 +359,6 @@ section {
   }
 
   .logo-main {
-    transform: none; /* rimuove lo scale */
     height: 40px;
     width: auto; /* mantiene proporzioni se è un <img> */
   }
