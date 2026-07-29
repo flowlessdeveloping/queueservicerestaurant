@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informativa sulla Privacy — SKIP orders</title>
+    <meta name="description" content="Informativa sul trattamento dei dati personali della piattaforma SKIP orders." />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#0b2540" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/skip-mark-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/skip-mark-180.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Vai al contenuto principale</a>
+
+    <header class="site-header scrolled">
+      <nav class="nav" aria-label="Navigazione principale">
+        <a class="brand" href="index.html" aria-label="SKIP orders — home">
+          <img
+            src="assets/images/skip-logo-lockup.png"
+            alt="SKIP orders"
+            width="660"
+            height="242"
+            class="brand-logo"
+          />
+        </a>
+        <div class="nav-menu">
+          <a href="index.html" class="btn btn-primary btn-sm">Torna al sito</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="legal-page">
+      <div class="container container-narrow">
+        <p class="eyebrow eyebrow-dark">Documenti legali</p>
+        <h1>Informativa sulla Privacy</h1>
+        <p class="legal-updated">Ultimo aggiornamento: 10 luglio 2026</p>
+        <div class="legal-content">
+          <p>Ai sensi del Regolamento UE 2016/679 (GDPR) e del D.Lgs. 196/2003 (Codice Privacy)</p>
+
+          <h3>1. Titolare e Responsabile del Trattamento</h3>
+          <p>Per i dati degli <strong>Utenti Finali</strong> (clienti del locale), il <strong>Titolare del Trattamento</strong> è il <strong>Locale Aderente</strong> (Esercente) presso cui viene effettuato l'ordine, che determina finalità e modalità del trattamento dei dati dei propri clienti (nome, telefono, dettagli ordine) per l'evasione dell'ordine stesso.<br>
+          <strong>SCHIP</strong> — servizio software sperimentale, erogato gratuitamente da uno sviluppatore indipendente e non gestito da alcuna società né soggetto registrato come impresa — agisce quale <strong>Responsabile del Trattamento</strong> (art. 28 GDPR) per conto del Locale Aderente, fornendo l'infrastruttura tecnica della Piattaforma. Questo è coerente con quanto previsto al punto 9 dei Termini di Servizio per gli Esercenti.<br>
+          Per i dati degli <strong>Esercenti</strong> stessi (email, P.IVA, dati dello Store), il Titolare del Trattamento è SCHIP.<br>
+          Per esercitare i diritti di cui agli artt. 15-22 GDPR sui propri dati, l'Utente Finale deve contattare il Locale Aderente presso cui utilizza il Servizio, in quanto Titolare del Trattamento per tali dati.</p>
+
+          <h3>2. Responsabile della Protezione dei Dati (DPO)</h3>
+          <p>Non è stato nominato un DPO formale, in quanto il trattamento dei dati è di portata limitata e non rientra nei casi di nomina obbligatoria ai sensi dell'art. 37 GDPR. Per qualsiasi richiesta privacy, fare riferimento al punto 11 (Contatti).</p>
+
+          <h3>3. Dati Raccolti e Finalità</h3>
+
+          <h4>3.1. Utenti Finali (Clienti del Locale)</h4>
+          <table>
+          <tr><th>Dato</th><th>Finalità</th><th>Base Giuridica</th><th>Conservazione</th></tr>
+          <tr><td>Identificativo anonimo (UID Firebase)</td><td>Autenticazione tecnica, associazione ordini</td><td>Legittimo interesse (Art. 6.1.f)</td><td>Max 48 ore dopo l'ultimo ordine, poi cancellazione automatica</td></tr>
+          <tr><td>Device ID (identificativo locale)</td><td>Recupero ordini attivi, storico ordini su dispositivo</td><td>Legittimo interesse</td><td>Solo su localStorage del dispositivo dell'utente</td></tr>
+          <tr><td>Nome (opzionale)</td><td>Identificazione ordine per ritiro al banco</td><td>Esecuzione contratto (Art. 6.1.b)</td><td>Durata dell'ordine</td></tr>
+          <tr><td>Numero di telefono (raccolto solo se il Locale Aderente ha attivato la funzione; in tal caso obbligatorio per il ritiro al banco)</td><td>Evasione dell'ordine e contatto del Locale Aderente in caso di mancato ritiro. Raccolta decisa e attivata dal Locale Aderente, quale Titolare del Trattamento</td><td>Esecuzione contratto (Art. 6.1.b)</td><td>Durata dell'ordine; cancellazione automatica al completamento, rifiuto o annullamento</td></tr>
+          <tr><td>Token FCM (notifiche push)</td><td>Invio notifiche stato ordine</td><td>Consenso (Art. 6.1.a)</td><td>Sessione corrente</td></tr>
+          <tr><td>Dati dell'ordine (prodotti, importo)</td><td>Elaborazione e storico ordini</td><td>Esecuzione contratto</td><td>Conformità fiscale (10 anni)</td></tr>
+          <tr><td>Indirizzo IP</td><td>Sicurezza, prevenzione abusi</td><td>Legittimo interesse</td><td>Log di sistema (max 90 giorni)</td></tr>
+          </table>
+
+          <h4>3.2. Esercenti (Commercianti)</h4>
+          <table>
+          <tr><th>Dato</th><th>Finalità</th><th>Base Giuridica</th><th>Conservazione</th></tr>
+          <tr><td>Email</td><td>Registrazione, login, comunicazioni di servizio</td><td>Esecuzione contratto (Art. 6.1.b)</td><td>Durata del rapporto + 10 anni (obblighi fiscali)</td></tr>
+          <tr><td>Password (hash)</td><td>Autenticazione</td><td>Esecuzione contratto</td><td>Durata del rapporto</td></tr>
+          <tr><td>Nome attività, P.IVA, Indirizzo</td><td>Configurazione store, compliance fiscale, visualizzazione su app cliente</td><td>Esecuzione contratto / Obbligo legale (Art. 6.1.c)</td><td>Durata rapporto + obblighi legali</td></tr>
+          <tr><td>Logo e immagini prodotti</td><td>Personalizzazione store, menu cliente</td><td>Esecuzione contratto</td><td>Fino a cancellazione da parte dell'Esercente</td></tr>
+          <tr><td>Stripe Account ID</td><td>Collegamento pagamenti online</td><td>Esecuzione contratto</td><td>Durata del collegamento Stripe</td></tr>
+          </table>
+
+          <h4>3.3. Dati NON Raccolti</h4>
+          <p>La Piattaforma <strong>NON</strong> raccoglie:
+          <br>- Dati delle carte di pagamento (gestiti esclusivamente da Stripe);
+          <br>- Dati biometrici;
+          <br>- Dati di geolocalizzazione;
+          <br>- Dati sensibili (origine razziale, opinioni politiche, salute, ecc.);
+          <br>- Dati di minori in modo consapevole.</p>
+
+          <h3>4. Modalità del Trattamento</h3>
+          <p>4.1. I dati sono trattati con strumenti elettronici e misure di sicurezza adeguate a prevenire accesso non autorizzato, perdita o distruzione.</p>
+          <p>4.2. Il trattamento avviene sui server della piattaforma <strong>Google Cloud Platform (Firebase)</strong>, con data center nell'Unione Europea (regione europe-west1).</p>
+          <p>4.3. Per gli ordini con ritiro al banco, se il Locale Aderente ha attivato la raccolta del numero di telefono (funzione opzionale, disattivata per impostazione predefinita e subordinata all'accettazione espressa di responsabilità da parte del Locale quale Titolare del Trattamento), la comanda cartacea stampata per il Locale Aderente può riportare un codice QR che, se inquadrato, avvia una chiamata al numero di telefono del cliente; il numero non viene mai stampato in chiaro. La comanda è un documento cartaceo ad uso interno del Locale e deve essere smaltita in modo sicuro (distruzione) dopo l'evasione dell'ordine.</p>
+
+          <h3>5. Destinatari dei Dati e Sub-responsabili</h3>
+          <p>Il Locale Aderente (Titolare per i dati degli Utenti Finali) tratta direttamente i dati necessari all'evasione dell'ordine (nome, telefono, dettagli ordine), anche tramite stampa cartacea della comanda in cucina/banco. Per l'erogazione tecnica del Servizio, SCHIP si avvale dei seguenti sub-responsabili:
+          <br>a) <strong>Google LLC / Firebase</strong>: hosting, autenticazione, database (DPA firmato, SCCs, Adequacy Decision);
+          <br>b) <strong>Stripe, Inc.</strong>: elaborazione pagamenti (DPA firmato, certificazione PCI DSS Level 1).
+          <br>I dati possono inoltre essere comunicati alle <strong>Autorità giudiziarie</strong>, se richiesto per obbligo di legge.</p>
+
+          <h3>6. Trasferimento Dati Extra-UE</h3>
+          <p>6.1. I dati sono primariamente conservati all'interno dell'Unione Europea su server Firebase (regione europe-west1).</p>
+          <p>6.2. Eventuali trasferimenti verso gli USA (Google, Stripe) avvengono sulla base delle Standard Contractual Clauses (SCCs) della Commissione Europea e/o della Decisione di Adeguatezza EU-US Data Privacy Framework.</p>
+
+          <h3>7. Diritti dell'Interessato</h3>
+          <p>Ai sensi degli articoli 15-22 del GDPR, l'interessato ha diritto di:
+          <br>a) <strong>Accesso</strong>: ottenere conferma dell'esistenza di dati e riceverne copia;
+          <br>b) <strong>Rettifica</strong>: aggiornare dati inesatti o incompleti;
+          <br>c) <strong>Cancellazione</strong> ("diritto all'oblio"): richiedere la cancellazione dei dati;
+          <br>d) <strong>Limitazione</strong>: richiedere la limitazione del trattamento;
+          <br>e) <strong>Portabilità</strong>: ricevere i dati in formato strutturato e leggibile;
+          <br>f) <strong>Opposizione</strong>: opporsi al trattamento basato su legittimo interesse;
+          <br>g) <strong>Revoca del consenso</strong>: revocare in qualsiasi momento i consensi prestati;
+          <br>h) <strong>Reclamo</strong>: presentare reclamo al Garante per la Protezione dei Dati Personali (<a href="https://www.garanteprivacy.it" target="_blank">www.garanteprivacy.it</a>).</p>
+          <p>Le richieste vanno inviate al Locale Aderente presso cui si utilizza il Servizio, in qualità di Titolare del Trattamento; il Locale potrà avvalersi del supporto tecnico di SCHIP, quale Responsabile del Trattamento, per darvi seguito.</p>
+
+          <h3>8. Misure di Sicurezza</h3>
+          <p>Adottiamo le seguenti misure tecniche e organizzative:
+          <br>a) Crittografia in transito (HTTPS/TLS) e a riposo (encryption at rest su Firestore);
+          <br>b) Autenticazione Firebase con hash bcrypt delle password;
+          <br>c) Firestore Security Rules multi-livello (L1: regole dichiarative, L2: validazione Cloud Functions, L3: controllo frontend);
+          <br>d) Isolamento dati multi-tenant (ogni Store ha sub-collection Firestore isolate);
+          <br>e) Cleanup automatico utenti anonimi dopo 48 ore e cancellazione del numero di telefono al termine degli ordini con ritiro al banco;
+          <br>f) Anti-frode sui pagamenti (auth-hold pattern, price verification server-side, anti-reuse PaymentIntent);
+          <br>g) Accesso role-based con custom claims Firebase Auth;
+          <br>h) Audit trail sugli ordini (timestamp, userId, stato).</p>
+
+          <h3>9. Cookie e Tecnologie Simili</h3>
+          <p>La Piattaforma utilizza esclusivamente cookie e tecnologie di memorizzazione locale strettamente necessari al funzionamento del Servizio. Per i dettagli, consultare la Cookie Policy.</p>
+
+          <h3>10. Modifiche alla Privacy Policy</h3>
+          <p>Il Titolare si riserva di aggiornare la presente Informativa. La versione vigente è sempre consultabile nella Piattaforma. In caso di modifiche sostanziali, l'utente sarà informato tramite avviso in-app.</p>
+
+          <h3>11. Contatti</h3>
+          <p>Per qualsiasi richiesta relativa alla privacy sui dati trattati come Utente Finale, contattare il Locale Aderente presso cui si utilizza il Servizio, quale Titolare del Trattamento. Per richieste relative ai dati dell'Esercente (di cui SCHIP è Titolare), contattare il Fornitore della Piattaforma SCHIP tramite i canali di supporto indicati in app.</p>
+        </div>
+
+        <p class="legal-footnote">
+          Questo documento è una copia statica del testo pubblicato nella
+          piattaforma SKIP orders. In caso di discordanza fa fede la versione
+          consultabile all'interno dell'applicazione.
+        </p>
+
+        <p class="legal-back">
+          <a href="index.html">&#8592; Torna alla home</a>
+        </p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <p>&copy; <span id="year">2026</span> SKIP orders. Tutti i diritti riservati.</p>
+          <p class="footer-legal">
+            <a href="privacy.html">Privacy Policy</a>
+            <span aria-hidden="true">·</span>
+            <a href="termini.html">Termini di servizio</a>
+            <span aria-hidden="true">·</span>
+            <a href="cookie.html">Cookie Policy</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

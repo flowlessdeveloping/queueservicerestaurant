@@ -3,472 +3,1371 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>QFlow - Saltacoda Intelligente</title>
+
+    <title>
+      SKIP orders — Ordini digitali con QR per bar, ristoranti e locali
+    </title>
+    <meta
+      name="description"
+      content="SKIP orders digitalizza gli ordini del tuo locale: menu con QR code, ritiro al banco, servizio al tavolo, comanda stampata in cucina e pagamenti online. Richiedi una demo gratuita."
+    />
+    <meta name="author" content="SKIP orders" />
+    <meta name="theme-color" content="#0b2540" />
+    <link
+      rel="canonical"
+      href="https://flowlessdeveloping.github.io/queueservicerestaurant/"
+    />
+
+    <!-- Favicon / icone -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/skip-mark-32.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/images/skip-mark-512.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/skip-mark-180.png" />
+
+    <!-- Open Graph / social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="SKIP orders" />
+    <meta
+      property="og:title"
+      content="SKIP orders — Ordini digitali con QR per bar e ristoranti"
+    />
+    <meta
+      property="og:description"
+      content="Menu con QR code, ritiro al banco, servizio al tavolo, comanda stampata in cucina e pagamenti online. Meno code, meno errori, più scontrini."
+    />
+    <meta
+      property="og:url"
+      content="https://flowlessdeveloping.github.io/queueservicerestaurant/"
+    />
+    <meta
+      property="og:image"
+      content="https://flowlessdeveloping.github.io/queueservicerestaurant/assets/images/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="SKIP orders — Ordini digitali con QR per bar e ristoranti"
+    />
+    <meta
+      name="twitter:description"
+      content="Menu con QR code, ritiro al banco, servizio al tavolo, comanda stampata in cucina e pagamenti online."
+    />
+    <meta
+      name="twitter:image"
+      content="https://flowlessdeveloping.github.io/queueservicerestaurant/assets/images/og-image.png"
+    />
+
     <link rel="stylesheet" href="style.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "SKIP orders",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, iOS, Android",
+        "description": "Piattaforma di ordinazione digitale per bar, ristoranti e locali: menu con QR code, ritiro al banco, servizio al tavolo, comanda stampata in cucina e pagamenti online.",
+        "url": "https://flowlessdeveloping.github.io/queueservicerestaurant/",
+        "inLanguage": "it-IT",
+        "provider": {
+          "@type": "Organization",
+          "name": "SKIP orders",
+          "email": "queueservicerestaurant@gmail.com",
+          "telephone": "+39 329 534 3049",
+          "areaServed": "IT",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "email": "queueservicerestaurant@gmail.com",
+            "telephone": "+39 329 534 3049",
+            "availableLanguage": ["it"]
+          }
+        }
+      }
+    </script>
   </head>
+
   <body>
-    <header>
-      <nav>
-        <div class="logo-container">
+    <a class="skip-link" href="#main">Vai al contenuto principale</a>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="site-header" id="site-header">
+      <nav class="nav" aria-label="Navigazione principale">
+        <a class="brand" href="#top" aria-label="SKIP orders — torna all'inizio">
           <img
-            src="assets/images/Skip-logo.png"
-            alt="Skip Logo"
-            class="logo-img"
+            src="assets/images/skip-logo-lockup.png"
+            alt="SKIP orders"
+            width="660"
+            height="242"
+            class="brand-logo"
           />
-          <span class="logo-text"> Systems</span>
-        </div>
-        <div class="nav-links">
-          <a href="#features">Funzionalità</a>
-          <a href="#how-it-works">Come Funziona</a>
-          <a href="#contact">Contatti</a>
+        </a>
+
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Apri il menu di navigazione"
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="#funzionalita">Funzionalità</a></li>
+            <li><a href="#come-funziona">Come funziona</a></li>
+            <li><a href="#piattaforma">Piattaforma</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+          </ul>
+          <a href="#contatti" class="btn btn-primary btn-sm nav-cta"
+            >Richiedi una demo</a
+          >
         </div>
       </nav>
     </header>
 
-    <main>
+    <main id="main">
+      <span id="top"></span>
+
+      <!-- ===================== HERO ===================== -->
       <section class="hero">
-        <div class="logo-container" style="margin-bottom: 2rem">
-          <img
-            src="assets/images/Skip-logo.png"
-            alt="Skip Logo"
-            class="logo-main"
-          />
-        </div>
-        <h1>Elimina le code,<br />aumenta i profitti</h1>
-        <p>
-          il salta coda è la soluzione definitiva per la gestione degli ordini
-          nei ristoranti. Ordini rapidi, clienti felici.
-        </p>
-        <a
-          href="#contact"
-          class="btn-primary"
-          style="background-color: var(--white); color: var(--primary-color)"
-          >Scopri Skip</a
-        >
-      </section>
-
-      <section id="features" class="features">
-        <h2 class="section-title">Perché scegliere Skip?</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>⚡ Saltacoda Veloce</h3>
-            <p>
-              Permetti ai tuoi clienti di ordinare direttamente dal loro
-              smartphone, evitando lunghe attese in cassa, aumenta lo scontrino
-              medio.
-            </p>
-          </div>
-          <div class="card">
-            <h3>🍳 Cucina Sincronizzata</h3>
-            <p>
-              Gli ordini arrivano istantaneamente in cucina con un display
-              dedicato allo staff, riducendo gli errori e i tempi di
-              preparazione.
-            </p>
-          </div>
-          <div class="card">
-            <h3>📈 Dashboard di Controllo</h3>
-            <p>
-              Monitora le vendite, i piatti più popolari e i tempi di servizio
-              in tempo reale dalla nostra dashboard amministrativa.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== SEZIONE COME FUNZIONA ===== -->
-      <section id="how-it-works" class="how-it-works">
-        <h2 class="section-title">Come funziona</h2>
-
-        <!-- Tab switcher modalità -->
-        <div class="mode-tabs">
-          <button class="mode-tab active" data-mode="counter">
-            🏪 Ritiro al Banco
-          </button>
-          <button class="mode-tab" data-mode="table">
-            🍽️ Ordina dal Tavolo
-          </button>
-        </div>
-
-        <!-- ===== MODALITÀ: RITIRO AL BANCO ===== -->
-        <div class="mode-panel active" id="mode-counter">
-          <!-- Step 1 -->
-          <div class="step">
-            <div class="step-content">
-              <span class="step-number">01</span>
-              <h3>Il Cliente Ordina</h3>
-              <p>
-                Tramite l'app mobile o scansionando un QR code al banco, il
-                cliente sfoglia il menu digitale ed effettua l'ordine in pochi
-                secondi.
-              </p>
-            </div>
-            <div class="step-content">
-              <div class="carousel-wrapper">
-                <button class="carousel-btn prev" aria-label="Precedente">
-                  &#8249;
-                </button>
-                <button class="carousel-btn next" aria-label="Successivo">
-                  &#8250;
-                </button>
-                <div class="carousel" id="carousel-1">
-                  <div class="carousel-item">
-                    <div class="screenshot-container">
-                      <img src="assets/images/1.png" alt="Scansione QR Code" />
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="screenshot-container">
-                      <img src="assets/images/2.png" alt="Menu Digitale" />
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="screenshot-container">
-                      <img src="assets/images/3.png" alt="Selezione Prodotto" />
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="screenshot-container">
-                      <img src="assets/images/4-2.png" alt="Pagamento Sicuro" />
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-nav">
-                  <div class="nav-dot active"></div>
-                  <div class="nav-dot"></div>
-                  <div class="nav-dot"></div>
-                  <div class="nav-dot"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="step">
-            <div class="step-content">
-              <span class="step-number">02</span>
-              <h3>Lo Staff Riceve</h3>
-              <p>
-                L'ordine appare immediatamente sullo schermo della cucina. Lo
-                staff può cambiare lo stato dell'ordine con un tocco.
-              </p>
-            </div>
-            <div class="step-content">
-              <div class="carousel-wrapper">
-                <button class="carousel-btn prev" aria-label="Precedente">
-                  &#8249;
-                </button>
-                <button class="carousel-btn next" aria-label="Successivo">
-                  &#8250;
-                </button>
-                <div class="carousel" id="carousel-2">
-                  <div class="carousel-item">
-                    <div class="screenshot-container">
-                      <img
-                        src="assets/images/8.png"
-                        alt="Dashboard Staff e Cucina 1"
-                      />
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="screenshot-container">
-                      <img
-                        src="assets/images/9.png"
-                        alt="Dashboard Staff e Cucina 2"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-nav">
-                  <div class="nav-dot active"></div>
-                  <div class="nav-dot"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="step">
-            <div class="step-content">
-              <span class="step-number">03</span>
-              <h3>Ritiro Immediato</h3>
-              <p>
-                Il cliente riceve una notifica quando il cibo è pronto. Basta
-                presentarsi al banco e ritirare, senza fila!
-              </p>
-            </div>
-            <div class="step-content">
-              <div class="carousel-wrapper">
-                <button class="carousel-btn prev" aria-label="Precedente">
-                  &#8249;
-                </button>
-                <button class="carousel-btn next" aria-label="Successivo">
-                  &#8250;
-                </button>
-                <div class="carousel" id="carousel-3">
-                  <div class="carousel-item">
-                    <div class="screenshot-container">
-                      <img
-                        src="assets/images/6.png"
-                        alt="Ordine in Preparazione"
-                      />
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="screenshot-container">
-                      <img src="assets/images/7.png" alt="Ordine Pronto" />
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-nav">
-                  <div class="nav-dot active"></div>
-                  <div class="nav-dot"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- fine mode-counter -->
-
-        <!-- ===== MODALITÀ: ORDINA DAL TAVOLO ===== -->
-        <div class="mode-panel" id="mode-table">
-          <!-- Step 1 -->
-          <div class="step">
-            <div class="step-content">
-              <span class="step-number">01</span>
-              <h3>Scansiona il QR al Tavolo</h3>
-              <p>
-                Il cliente inquadra il QR code posizionato sul tavolo con la
-                fotocamera dello smartphone: nessuna app da scaricare, si apre
-                direttamente il menu digitale del locale.
-              </p>
-            </div>
-            <div class="step-content">
-              <div class="carousel-wrapper">
-                </button>
-                <div class="carousel" id="carousel-t1">
-                  <div class="carousel-item">
-                    <div class="screenshot-container">
-                      <img
-                        src="assets/images/qrtavolo.jpg"
-                        alt="QR Code al Tavolo"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-nav">
-                  <div class="nav-dot active"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="step">
-            <div class="step-content">
-              <span class="step-number">02</span>
-              <h3>Ordina dallo Smartphone</h3>
-              <p>
-                Il cliente sfoglia il menu, sceglie i piatti e invia l'ordine
-                direttamente dallo smartphone. L'ordine parte subito verso la
-                cucina — nessun cameriere necessario per ordinare.
-              </p>
-            </div>
-            <div class="step-content">
-              <div class="carousel-wrapper">
-                <button class="carousel-btn prev" aria-label="Precedente">
-                  &#8249;
-                </button>
-                <button class="carousel-btn next" aria-label="Successivo">
-                  &#8250;
-                </button>
-                <div class="carousel" id="carousel-t2">
-                  <div class="carousel-item">
-                    <div class="screenshot-container">
-                      <img
-                        src="assets/images/menu.png"
-                        alt="Ordine dal Tavolo"
-                      />
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="screenshot-container">
-                      <img
-                        src="assets/images/confirm-order.png"
-                        alt="Ordine dal Tavolo"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-nav">
-                  <div class="nav-dot active"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="step">
-            <div class="step-content">
-              <span class="step-number">03</span>
-              <h3>La Cucina Prepara</h3>
-              <p>
-                L'ordine arriva istantaneamente sul display di cucina con il
-                numero del tavolo. Lo staff vede subito cosa preparare e può
-                aggiornare lo stato con un tocco.
-              </p>
-            </div>
-            <div class="step-content">
-              <div class="carousel-wrapper">
-                <button class="carousel-btn prev" aria-label="Precedente">
-                  &#8249;
-                </button>
-                <button class="carousel-btn next" aria-label="Successivo">
-                  &#8250;
-                </button>
-                <div class="carousel" id="carousel-t3">
-                  <div class="carousel-item">
-                    <div class="screenshot-container">
-                      <img
-                        src="assets/images/cucina3.png"
-                        alt="KDS Cucina Tavolo 1"
-                      />
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="screenshot-container">
-                      <img
-                        src="assets/images/tavoli.png"
-                        alt="KDS Cucina Tavolo 2"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-nav">
-                  <div class="nav-dot active"></div>
-                  <div class="nav-dot"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 4 -->
-          <div class="step">
-            <div class="step-content">
-              <span class="step-number">04</span>
-              <h3>Servizio al Tavolo e Pagamento con POS</h3>
-              <p>
-                Il cameriere porta i piatti direttamente al tavolo. Il cliente
-                paga comodamente con il POS portato dal cameriere — carta,
-                contanti o contactless, senza doversi spostare dalla sedia.
-              </p>
-            </div>
-            <div class="step-content">
-              <div class="carousel-wrapper">
-                <button class="carousel-btn prev" aria-label="Precedente">
-                  &#8249;
-                </button>
-                <button class="carousel-btn next" aria-label="Successivo">
-                  &#8250;
-                </button>
-                <div class="carousel" id="carousel-t4">
-                  <div class="carousel-item">
-                    <div class="screenshot-container">
-                      <img
-                        src="assets/images/servizio1.png"
-                        alt="Ordine in Preparazione Tavolo"
-                      />
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="screenshot-container">
-                      <img
-                        src="assets/images/servizio2.png"
-                        alt="Pronto per il Tavolo"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-nav">
-                  <div class="nav-dot active"></div>
-                  <div class="nav-dot"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- fine mode-table -->
-      </section>
-
-      <section id="contact">
-        <h2 class="section-title">Pronto a trasformare il tuo locale?</h2>
-        <div style="text-align: center; max-width: 600px; margin: 0 auto">
-          <p style="margin-bottom: 2rem">
-            Contattaci oggi per una dimostrazione gratuita di QSR Flow.
+        <div class="hero-grid">
+        <div class="hero-inner">
+          <p class="eyebrow">
+            <span class="dot" aria-hidden="true"></span>
+            Per bar, ristoranti, pizzerie, chioschi e sagre
           </p>
-          <a href="mailto:queueservicerestaurant@gmail.com" class="btn-primary"
-            >Contattaci!</a
+
+          <h1>
+            Elimina le code.<br />
+            <span class="grad">Digitalizza gli ordini</span> del tuo locale.
+          </h1>
+
+          <p class="hero-sub">
+            SKIP orders porta il tuo menu su smartphone con un QR code. I clienti
+            ordinano e pagano da soli, la comanda esce stampata in cucina e tu
+            segui gli incassi in tempo reale.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contatti" class="btn btn-primary btn-lg"
+              >Richiedi una demo gratuita</a
+            >
+            <a
+              href="https://wa.me/393295343049?text=Ciao%2C%20vorrei%20informazioni%20su%20SKIP%20orders%20per%20il%20mio%20locale."
+              class="btn btn-ghost btn-lg"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7c1.7.9 3.6 1.4 5.6 1.4 6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.4-8.3Z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M8.5 6.9c-.3 0-.7.1-1 .5-.4.4-1.2 1.2-1.2 2.8s1.2 3.2 1.4 3.5c.2.3 2.4 3.8 5.9 5.2 2.9 1.1 3.5.9 4.1.9.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.6.2-1.7-.1-.2-.3-.3-.7-.4l-2.3-1.1c-.3-.1-.6-.2-.8.2l-1.1 1.4c-.2.3-.4.3-.7.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.7l.6-.7c.2-.2.2-.4.3-.6.1-.2 0-.5-.1-.6l-1-2.3c-.2-.4-.4-.4-.7-.4h-.4Z"
+                  fill="currentColor"
+                />
+              </svg>
+              Scrivici su WhatsApp
+            </a>
+          </div>
+
+          <ul class="hero-trust">
+            <li>Nessuna app da scaricare per il cliente</li>
+            <li>Pagamenti sicuri con Stripe</li>
+            <li>Attivazione in pochi giorni</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-shot hero-shot-back">
+            <img
+              src="assets/images/5.png"
+              alt=""
+              loading="eager"
+              width="1066"
+              height="803"
+            />
+          </div>
+          <div class="hero-shot hero-shot-front">
+            <img
+              src="assets/images/menu.png"
+              alt=""
+              loading="eager"
+              width="488"
+              height="1051"
+            />
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <!-- ===================== BENEFICI ===================== -->
+      <section class="section section-tight" id="benefici">
+        <div class="container">
+          <div class="benefits">
+            <article class="benefit reveal">
+              <div class="benefit-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h3>Meno attese in cassa</h3>
+              <p>
+                Il cliente ordina dal proprio telefono mentre è in fila, al tavolo
+                o prima ancora di entrare. Il personale in cassa smette di essere
+                il collo di bottiglia nelle ore di punta.
+              </p>
+            </article>
+
+            <article class="benefit reveal">
+              <div class="benefit-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M9 12.5 11 14.5 15.5 10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.9"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 2.5 20.5 6v6c0 5-3.6 8.2-8.5 9.5C7.1 20.2 3.5 17 3.5 12V6L12 2.5Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h3>Zero ordini sbagliati</h3>
+              <p>
+                Niente più comande urlate o scritte a mano. L'ordine arriva in
+                cucina esattamente come il cliente l'ha composto, note e varianti
+                comprese.
+              </p>
+            </article>
+
+            <article class="benefit reveal">
+              <div class="benefit-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M4 19.5h16M6.5 16V9m5 7V4.5m5 11.5v-5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.9"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <h3>Controllo sui numeri</h3>
+              <p>
+                Incassi, ordini e prodotti più venduti aggiornati in tempo reale.
+                Sai sempre cosa sta funzionando e cosa no, senza chiudere la cassa.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== COME FUNZIONA ===================== -->
+      <section class="section section-alt" id="come-funziona">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow eyebrow-dark">Come funziona</p>
+            <h2>Due modalità di servizio, un solo sistema</h2>
+            <p class="section-sub">
+              Puoi attivarle entrambe o solo quella che ti serve. Scegli una
+              modalità per vedere il flusso completo.
+            </p>
+          </header>
+
+          <div class="mode-tabs" role="tablist" aria-label="Modalità di servizio">
+            <button
+              class="mode-tab active"
+              data-mode="counter"
+              role="tab"
+              id="tab-counter"
+              aria-selected="true"
+              aria-controls="mode-counter"
+            >
+              Ritiro al banco
+            </button>
+            <button
+              class="mode-tab"
+              data-mode="table"
+              role="tab"
+              id="tab-table"
+              aria-selected="false"
+              aria-controls="mode-table"
+            >
+              Ordine dal tavolo
+            </button>
+          </div>
+
+          <!-- ===== MODALITÀ: RITIRO AL BANCO ===== -->
+          <div
+            class="mode-panel active"
+            id="mode-counter"
+            role="tabpanel"
+            aria-labelledby="tab-counter"
           >
+            <div class="step">
+              <div class="step-text">
+                <span class="step-number">01</span>
+                <h3>Il cliente ordina</h3>
+                <p>
+                  Dall'app o inquadrando il QR code al banco, il cliente sfoglia
+                  il menu digitale, personalizza i piatti con note e varianti e
+                  paga in pochi secondi.
+                </p>
+              </div>
+              <div class="step-media">
+                <div class="carousel-wrapper">
+                  <button class="carousel-btn prev" aria-label="Immagine precedente">
+                    &#8249;
+                  </button>
+                  <button class="carousel-btn next" aria-label="Immagine successiva">
+                    &#8250;
+                  </button>
+                  <div class="carousel" id="carousel-1">
+                    <div class="carousel-item">
+                      <div class="screenshot phone">
+                        <img
+                          src="assets/images/1.png"
+                          alt="Scansione del QR code per aprire il menu"
+                          loading="lazy"
+                          width="572"
+                          height="1024"
+                        />
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="screenshot phone">
+                        <img
+                          src="assets/images/2.png"
+                          alt="Menu digitale con categorie e prodotti"
+                          loading="lazy"
+                          width="1179"
+                          height="1995"
+                        />
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="screenshot phone">
+                        <img
+                          src="assets/images/3.png"
+                          alt="Selezione di un prodotto con varianti"
+                          loading="lazy"
+                          width="1179"
+                          height="2025"
+                        />
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="screenshot phone">
+                        <img
+                          src="assets/images/4-2.png"
+                          alt="Pagamento sicuro con carta"
+                          loading="lazy"
+                          width="369"
+                          height="739"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-nav">
+                    <button class="nav-dot active" aria-label="Vai all'immagine 1"></button>
+                    <button class="nav-dot" aria-label="Vai all'immagine 2"></button>
+                    <button class="nav-dot" aria-label="Vai all'immagine 3"></button>
+                    <button class="nav-dot" aria-label="Vai all'immagine 4"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-text">
+                <span class="step-number">02</span>
+                <h3>L'ordine arriva stampato in cucina</h3>
+                <p>
+                  La comanda esce automaticamente dalla stampante del locale, con
+                  il numero dell'ordine e tutti i piatti richiesti. Il personale
+                  non deve imparare nulla di nuovo: lavora sulla comanda di carta
+                  come ha sempre fatto.
+                </p>
+              </div>
+              <div class="step-media">
+                <figure class="printer-figure">
+                  <img
+                    src="assets/images/stampa-comanda-banco.svg"
+                    alt="Stampante da cucina che stampa la comanda di un ordine"
+                    loading="lazy"
+                    width="520"
+                    height="470"
+                  />
+                </figure>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-text">
+                <span class="step-number">03</span>
+                <h3>Ritiro senza fila</h3>
+                <p>
+                  Quando l'ordine è pronto il cliente riceve una notifica sul
+                  telefono. Si presenta al banco, mostra il numero e ritira: la
+                  fila alla cassa non esiste più.
+                </p>
+              </div>
+              <div class="step-media">
+                <div class="carousel-wrapper">
+                  <button class="carousel-btn prev" aria-label="Immagine precedente">
+                    &#8249;
+                  </button>
+                  <button class="carousel-btn next" aria-label="Immagine successiva">
+                    &#8250;
+                  </button>
+                  <div class="carousel" id="carousel-3">
+                    <div class="carousel-item">
+                      <div class="screenshot phone">
+                        <img
+                          src="assets/images/6.png"
+                          alt="Schermata dell'ordine in preparazione"
+                          loading="lazy"
+                          width="369"
+                          height="752"
+                        />
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="screenshot phone">
+                        <img
+                          src="assets/images/7.png"
+                          alt="Notifica di ordine pronto per il ritiro"
+                          loading="lazy"
+                          width="368"
+                          height="749"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-nav">
+                    <button class="nav-dot active" aria-label="Vai all'immagine 1"></button>
+                    <button class="nav-dot" aria-label="Vai all'immagine 2"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== MODALITÀ: ORDINE DAL TAVOLO ===== -->
+          <div
+            class="mode-panel"
+            id="mode-table"
+            role="tabpanel"
+            aria-labelledby="tab-table"
+          >
+            <div class="step">
+              <div class="step-text">
+                <span class="step-number">01</span>
+                <h3>Scansiona il QR al tavolo</h3>
+                <p>
+                  Il cliente inquadra il QR code sul tavolo con la fotocamera:
+                  nessuna app da scaricare, si apre direttamente il menu digitale
+                  del locale.
+                </p>
+              </div>
+              <div class="step-media">
+                <div class="carousel-wrapper">
+                  <div class="carousel" id="carousel-t1">
+                    <div class="carousel-item">
+                      <div class="screenshot phone">
+                        <img
+                          src="assets/images/qrtavolo.jpg"
+                          alt="QR code posizionato sul tavolo del locale"
+                          loading="lazy"
+                          width="572"
+                          height="1024"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-text">
+                <span class="step-number">02</span>
+                <h3>Ordina dallo smartphone</h3>
+                <p>
+                  Sceglie i piatti e invia l'ordine dal proprio telefono. La
+                  comanda parte subito verso la cucina, senza dover attendere il
+                  cameriere.
+                </p>
+              </div>
+              <div class="step-media">
+                <div class="carousel-wrapper">
+                  <button class="carousel-btn prev" aria-label="Immagine precedente">
+                    &#8249;
+                  </button>
+                  <button class="carousel-btn next" aria-label="Immagine successiva">
+                    &#8250;
+                  </button>
+                  <div class="carousel" id="carousel-t2">
+                    <div class="carousel-item">
+                      <div class="screenshot phone">
+                        <img
+                          src="assets/images/menu.png"
+                          alt="Menu digitale aperto dal tavolo"
+                          loading="lazy"
+                          width="488"
+                          height="1051"
+                        />
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="screenshot phone">
+                        <img
+                          src="assets/images/confirm-order.png"
+                          alt="Conferma dell'ordine dal tavolo"
+                          loading="lazy"
+                          width="390"
+                          height="827"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-nav">
+                    <button class="nav-dot active" aria-label="Vai all'immagine 1"></button>
+                    <button class="nav-dot" aria-label="Vai all'immagine 2"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-text">
+                <span class="step-number">03</span>
+                <h3>L'ordine arriva stampato in cucina</h3>
+                <p>
+                  La comanda esce dalla stampante già con il numero del tavolo
+                  stampato sopra. La cucina sa subito cosa preparare e per chi,
+                  senza passaggi di voce e senza fogli scritti a mano.
+                </p>
+              </div>
+              <div class="step-media">
+                <figure class="printer-figure">
+                  <img
+                    src="assets/images/stampa-comanda-tavolo.svg"
+                    alt="Stampante da cucina che stampa la comanda di un tavolo"
+                    loading="lazy"
+                    width="520"
+                    height="470"
+                  />
+                </figure>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-text">
+                <span class="step-number">04</span>
+                <h3>Servizio al tavolo e pagamento</h3>
+                <p>
+                  Il cameriere porta i piatti e incassa direttamente al tavolo con
+                  il POS, oppure il cliente paga online dal telefono. In entrambi
+                  i casi il conto si chiude senza spostarsi dalla sedia.
+                </p>
+              </div>
+              <div class="step-media">
+                <div class="carousel-wrapper">
+                  <button class="carousel-btn prev" aria-label="Immagine precedente">
+                    &#8249;
+                  </button>
+                  <button class="carousel-btn next" aria-label="Immagine successiva">
+                    &#8250;
+                  </button>
+                  <div class="carousel" id="carousel-t4">
+                    <div class="carousel-item">
+                      <div class="screenshot phone">
+                        <img
+                          src="assets/images/servizio1.png"
+                          alt="Stato dell'ordine al tavolo in preparazione"
+                          loading="lazy"
+                          width="490"
+                          height="1057"
+                        />
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="screenshot phone">
+                        <img
+                          src="assets/images/servizio2.png"
+                          alt="Ordine pronto per il servizio al tavolo"
+                          loading="lazy"
+                          width="488"
+                          height="1053"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-nav">
+                    <button class="nav-dot active" aria-label="Vai all'immagine 1"></button>
+                    <button class="nav-dot" aria-label="Vai all'immagine 2"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== FUNZIONALITÀ ===================== -->
+      <section class="section" id="funzionalita">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow eyebrow-dark">Funzionalità</p>
+            <h2>Tutto quello che serve per far girare il servizio</h2>
+            <p class="section-sub">
+              Ogni modulo si attiva o si disattiva in base al tuo locale: usa solo
+              quello che ti serve davvero.
+            </p>
+          </header>
+
+          <div class="feature-grid">
+            <article class="feature reveal">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M6 8h12l-1.2 11.2a1.6 1.6 0 0 1-1.6 1.4H8.8a1.6 1.6 0 0 1-1.6-1.4L6 8Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9 8V6.2A3 3 0 0 1 12 3.2a3 3 0 0 1 3 3V8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <h3>Asporto e ritiro al banco</h3>
+              <p>
+                Il cliente ordina dall'app o dal QR code, riceve un numero e si
+                presenta al banco solo quando è tutto pronto.
+              </p>
+            </article>
+
+            <article class="feature reveal">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M7 3v7a2.5 2.5 0 0 0 5 0V3M9.5 12.5V21"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M17.5 3c-1.4 1.5-2 3.6-2 5.6 0 1.5.7 2.4 2 2.6V21"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h3>Servizio al tavolo</h3>
+              <p>
+                Un QR code su ogni tavolo. Il cliente ordina quando vuole e
+                l'ordine arriva in cucina con il numero del tavolo già associato.
+              </p>
+            </article>
+
+            <article class="feature reveal">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect
+                    x="2.5"
+                    y="5"
+                    width="19"
+                    height="14"
+                    rx="2.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  />
+                  <path
+                    d="M2.5 9.5h19M6 15h4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <h3>Pagamenti online</h3>
+              <p>
+                Il cliente paga con carta, Apple Pay o Google Pay. Gli incassi
+                arrivano sul conto del locale.
+              </p>
+            </article>
+
+            <article class="feature reveal">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M7 9V3.8h10V9"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M4.5 9h15a1.5 1.5 0 0 1 1.5 1.5v5a1.5 1.5 0 0 1-1.5 1.5H17M7 17H4.5A1.5 1.5 0 0 1 3 15.5v-5A1.5 1.5 0 0 1 4.5 9Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M7 14h10v6.2H7z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h3>Comanda stampata in cucina</h3>
+              <p>
+                Ogni ordine esce dalla stampante del locale con numero, tavolo e
+                piatti. Chi lavora in cucina non deve toccare nessuno schermo.
+              </p>
+            </article>
+
+            <article class="feature reveal">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M18 9a6 6 0 1 0-12 0c0 5-2 6.5-2 6.5h16S18 14 18 9Z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.3 19a2 2 0 0 0 3.4 0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <h3>Notifiche push</h3>
+              <p>
+                Il cliente riceve una notifica quando l'ordine passa in
+                preparazione e quando è pronto da ritirare. Nessuno resta a
+                fissare il bancone.
+              </p>
+            </article>
+
+            <article class="feature reveal">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M3.5 20.5h17"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M6 17V11m6 6V4.5m6 12.5V8"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.9"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <h3>Report e statistiche</h3>
+              <p>
+                Incassi, numero di ordini, scontrino medio e prodotti più venduti,
+                sempre aggiornati.
+              </p>
+            </article>
+
+            <article class="feature reveal">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M6.5 16.5a4 4 0 0 1 .6-8A5.5 5.5 0 0 1 18 9.4a3.6 3.6 0 0 1-.5 7.1"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 21v-8m0 0-2.5 2.5M12 13l2.5 2.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h3>Il tuo menu, caricato in poco tempo</h3>
+              <p>
+                Se hai già il listino in un foglio di calcolo lo importi così
+                com'è: diventa menu digitale senza riscrivere tutto a mano.
+              </p>
+            </article>
+
+            <article class="feature reveal">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="8.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  />
+                  <path
+                    d="M12 7v5.2l3.3 2"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h3>Chiusura automatica</h3>
+              <p>
+                A fine servizio gli ordini rimasti aperti si chiudono da soli
+                all'orario che decidi tu. La mattina dopo la dashboard è pulita.
+              </p>
+            </article>
+
+            <article class="feature reveal">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 3.5v17M8 7.5h6.2a2.6 2.6 0 0 1 0 5.2H9.6a2.6 2.6 0 0 0 0 5.3H16.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h3>Importo minimo d'ordine</h3>
+              <p>
+                Imposti la soglia sotto la quale non accetti ordini da app, così
+                il servizio resta sostenibile anche nelle ore morte.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== PIATTAFORMA ===================== -->
+      <section class="section section-alt" id="piattaforma">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow eyebrow-dark">La piattaforma</p>
+            <h2>Ogni persona del locale ha il suo strumento</h2>
+            <p class="section-sub">
+              Cliente, cucina e titolare lavorano sullo stesso sistema, ognuno
+              vedendo solo quello che gli serve.
+            </p>
+          </header>
+
+          <div class="platform-grid">
+            <article class="platform-card reveal">
+              <span class="platform-tag">Cliente</span>
+              <h3>Il menu sul telefono</h3>
+              <p>
+                Si apre inquadrando il QR code, senza installare niente.
+              </p>
+              <ul class="ticks">
+                <li>Menu con categorie, ricerca e varianti</li>
+                <li>Ordine e pagamento in pochi passaggi</li>
+                <li>Avviso quando l'ordine è pronto</li>
+              </ul>
+            </article>
+
+            <article class="platform-card reveal">
+              <span class="platform-tag">Cucina</span>
+              <h3>La comanda in cucina</h3>
+              <p>
+                Ogni ordine esce stampato, pronto da appendere e da preparare.
+              </p>
+              <ul class="ticks">
+                <li>Numero dell'ordine e tavolo già stampati</li>
+                <li>Note e varianti scritte sulla comanda</li>
+                <li>Nessuna formazione necessaria per il personale</li>
+              </ul>
+            </article>
+
+            <article class="platform-card reveal">
+              <span class="platform-tag">Titolare</span>
+              <h3>Il pannello di gestione</h3>
+              <p>
+                Da computer o da telefono, per tenere tutto sotto controllo.
+              </p>
+              <ul class="ticks">
+                <li>Menu, prezzi e prodotti disponibili</li>
+                <li>Tavoli e stampa dei QR code</li>
+                <li>Incassi e prodotti più venduti</li>
+              </ul>
+            </article>
+
+            <article class="platform-card reveal">
+              <span class="platform-tag">Più locali</span>
+              <h3>Se hai più di un locale</h3>
+              <p>
+                Ogni sede ha il proprio menu, i propri prezzi e i propri numeri.
+              </p>
+              <ul class="ticks">
+                <li>Menu e listino separati per ogni sede</li>
+                <li>Servizi attivabili locale per locale</li>
+                <li>Incassi consultabili sede per sede</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== FAQ ===================== -->
+      <section class="section" id="faq">
+        <div class="container container-narrow">
+          <header class="section-head">
+            <p class="eyebrow eyebrow-dark">Domande frequenti</p>
+            <h2>Le domande che ci fanno più spesso</h2>
+          </header>
+
+          <div class="faq">
+            <details class="faq-item">
+              <summary>Il cliente deve scaricare un'applicazione?</summary>
+              <div class="faq-body">
+                <p>
+                  No. Inquadrando il QR code si apre direttamente il menu nel
+                  browser del telefono. Chi vuole può poi salvare SKIP orders come
+                  app sulla schermata principale, ma non è obbligatorio per
+                  ordinare.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Cosa serve avere nel locale?</summary>
+              <div class="faq-body">
+                <p>
+                  Una connessione internet e una stampante per le comande. Se ne
+                  hai già una la colleghiamo, altrimenti ti indichiamo quale
+                  prendere: sono le normali stampanti termiche da scontrino.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Posso usare solo il servizio al tavolo, o solo l'asporto?</summary>
+              <div class="faq-body">
+                <p>
+                  Sì. Ritiro al banco e servizio al tavolo sono due moduli
+                  indipendenti: puoi attivarne uno, l'altro o entrambi, e cambiare
+                  idea in qualsiasi momento.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Come vengono gestiti i pagamenti e gli incassi?</summary>
+              <div class="faq-body">
+                <p>
+                  Gli incassi dei pagamenti online arrivano sul conto del tuo
+                  locale. Puoi anche lasciare il pagamento alla cassa o al POS del
+                  cameriere e usare SKIP orders solo per le comande.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Devo reinserire tutto il menu a mano?</summary>
+              <div class="faq-body">
+                <p>
+                  No. Se hai già il listino in un foglio di calcolo lo importiamo
+                  e diventa menu digitale. Da lì correggi solo quello che serve.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Quanto tempo serve per partire?</summary>
+              <div class="faq-body">
+                <p>
+                  Dipende dalla dimensione del menu, ma nella maggior parte dei casi
+                  bastano pochi giorni tra configurazione, caricamento del menu,
+                  stampa dei QR code e una breve formazione dello staff. Scrivici e
+                  ti diamo una stima sul tuo caso.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Quanto costa?</summary>
+              <div class="faq-body">
+                <p>
+                  La piattaforma è attualmente in fase beta e viene messa a
+                  disposizione dei locali <strong>senza alcun canone</strong>.
+                  Restano a carico del locale le sole commissioni applicate da
+                  Stripe sui pagamenti online.
+                </p>
+                <p>
+                  In futuro potranno essere introdotte delle tariffe: in quel caso
+                  te lo comunicheremo con almeno 30 giorni di preavviso, come
+                  previsto dai
+                  <a href="termini.html">termini di servizio</a>.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== CONTATTI ===================== -->
+      <section class="section section-alt" id="contatti">
+        <div class="container">
+          <div class="contact-layout">
+            <div class="contact-intro">
+              <p class="eyebrow eyebrow-dark">Contatti</p>
+              <h2>Vediamo insieme se fa al caso tuo</h2>
+              <p class="section-sub">
+                Raccontaci com'è organizzato il tuo locale: ti mostriamo la
+                piattaforma in funzione e ti diciamo con onestà se ha senso per te.
+                La demo è gratuita e senza impegno.
+              </p>
+
+              <ul class="contact-list">
+                <li>
+                  <span class="contact-ico" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                      <path d="m3.5 6.5 8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span>
+                    <strong>Email</strong>
+                    <a href="mailto:queueservicerestaurant@gmail.com?subject=Richiesta%20demo%20SKIP%20orders"
+                      >queueservicerestaurant@gmail.com</a
+                    >
+                  </span>
+                </li>
+                <li>
+                  <span class="contact-ico" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M4.5 4.5h4l1.7 4.2-2.2 1.6a12 12 0 0 0 5.7 5.7l1.6-2.2 4.2 1.7v4a1.5 1.5 0 0 1-1.6 1.5C9.6 20.4 3.6 14.4 3 5.9A1.4 1.4 0 0 1 4.5 4.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span>
+                    <strong>Telefono</strong>
+                    <a href="tel:+393295343049">+39 329 534 3049</a>
+                  </span>
+                </li>
+                <li>
+                  <span class="contact-ico" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l4.8-1.3A9.5 9.5 0 1 0 12 2.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                      <path d="M8.8 7.6c.4 0 .5.1.7.5l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.2.2-.2.3-.1.5.4.8 1.5 2 2.7 2.6.2.1.4.1.5-.1l.7-.9c.2-.2.3-.2.6-.1l1.6.8c.3.1.4.2.4.4 0 .5-.2 1.2-.9 1.6-.4.2-1 .3-2.4-.2-2.4-.9-4-3.2-4.2-3.4-.1-.2-.9-1.2-.9-2.4s.6-1.7.9-2c.2-.1.3-.1.4-.1h.3Z" fill="currentColor"/>
+                    </svg>
+                  </span>
+                  <span>
+                    <strong>WhatsApp</strong>
+                    <a
+                      href="https://wa.me/393295343049?text=Ciao%2C%20vorrei%20informazioni%20su%20SKIP%20orders%20per%20il%20mio%20locale."
+                      target="_blank"
+                      rel="noopener"
+                      >Scrivici subito su WhatsApp</a
+                    >
+                  </span>
+                </li>
+                <li>
+                  <span class="contact-ico" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                      <path d="M12 7v5.2l3.3 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span>
+                    <strong>Quando ci trovi</strong>
+                    <span class="contact-plain">Lunedì – Venerdì, 9:00 – 19:00</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="contact-form-wrap">
+              <form class="contact-form" id="contact-form" novalidate>
+                <h3>Richiedi una demo gratuita</h3>
+                <p class="form-hint">
+                  Compila i campi: si aprirà il tuo programma di posta con il
+                  messaggio già pronto da inviare.
+                </p>
+
+                <div class="field">
+                  <label for="f-nome">Nome e cognome <span aria-hidden="true">*</span></label>
+                  <input id="f-nome" name="nome" type="text" required autocomplete="name" />
+                </div>
+
+                <div class="field">
+                  <label for="f-locale">Nome del locale <span aria-hidden="true">*</span></label>
+                  <input id="f-locale" name="locale" type="text" required autocomplete="organization" />
+                </div>
+
+                <div class="field-row">
+                  <div class="field">
+                    <label for="f-email">Email <span aria-hidden="true">*</span></label>
+                    <input id="f-email" name="email" type="email" required autocomplete="email" />
+                  </div>
+                  <div class="field">
+                    <label for="f-tel">Telefono</label>
+                    <input id="f-tel" name="telefono" type="tel" autocomplete="tel" />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="f-tipo">Cosa ti interessa</label>
+                  <select id="f-tipo" name="interesse">
+                    <option value="Entrambi">Ritiro al banco e servizio al tavolo</option>
+                    <option value="Ritiro al banco">Solo ritiro al banco / asporto</option>
+                    <option value="Servizio al tavolo">Solo servizio al tavolo</option>
+                    <option value="Non lo so ancora">Non lo so ancora</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="f-msg">Messaggio</label>
+                  <textarea
+                    id="f-msg"
+                    name="messaggio"
+                    rows="4"
+                    placeholder="Che tipo di locale hai? Quanti coperti o quanti ordini al giorno?"
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">
+                  Invia la richiesta
+                </button>
+
+                <p class="form-privacy">
+                  I dati che inserisci vengono usati solo per risponderti. Non
+                  vengono salvati da questo sito.
+                </p>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <div class="footer-content">
-        <div class="footer-section">
-          <h4>Skip Systems</h4>
-          <p>Innovazione per la ristorazione moderna.</p>
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img
+              src="assets/images/skip-logo-lockup.png"
+              alt="SKIP orders"
+              width="660"
+              height="242"
+              loading="lazy"
+            />
+            <p>
+              Ordini digitali, comande stampate in cucina e pagamenti online per
+              bar, ristoranti e locali che vogliono servire più clienti in meno
+              tempo.
+            </p>
+          </div>
+
+          <nav class="footer-col" aria-label="Prodotto">
+            <h4>Prodotto</h4>
+            <ul>
+              <li><a href="#funzionalita">Funzionalità</a></li>
+              <li><a href="#come-funziona">Come funziona</a></li>
+              <li><a href="#piattaforma">Piattaforma</a></li>
+                <li><a href="#faq">Domande frequenti</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer-col">
+            <h4>Contatti</h4>
+            <ul>
+              <li>
+                <a href="mailto:queueservicerestaurant@gmail.com?subject=Richiesta%20demo%20SKIP%20orders"
+                  >queueservicerestaurant@gmail.com</a
+                >
+              </li>
+              <li><a href="tel:+393295343049">+39 329 534 3049</a></li>
+              <li>
+                <a
+                  href="https://wa.me/393295343049?text=Ciao%2C%20vorrei%20informazioni%20su%20SKIP%20orders%20per%20il%20mio%20locale."
+                  target="_blank"
+                  rel="noopener"
+                  >WhatsApp</a
+                >
+              </li>
+              <li>Lunedì – Venerdì, 9:00 – 19:00</li>
+            </ul>
+          </div>
         </div>
-        <div class="footer-section">
-          <h4>Contatti</h4>
-          <p>Email: queueservicerestaurant@gmail.com</p>
-          <p>Tel: +39 3295343049</p>
-        </div>
-        <div class="footer-section">
-          <h4>Link Utili</h4>
-          <p>
-            <a href="#" style="color: white; text-decoration: none"
-              >Privacy Policy</a
-            >
+
+        <div class="footer-bottom">
+          <p>&copy; <span id="year">2026</span> SKIP orders. Tutti i diritti riservati.</p>
+          <p class="footer-legal">
+            <a href="privacy.html">Privacy Policy</a>
+            <span aria-hidden="true">·</span>
+            <a href="termini.html">Termini di servizio</a>
+            <span aria-hidden="true">·</span>
+            <a href="cookie.html">Cookie Policy</a>
           </p>
-          <p>
-            <a href="#" style="color: white; text-decoration: none"
-              >Termini di Servizio</a
-            >
-          </p>
         </div>
-      </div>
-      <div
-        style="
-          text-align: center;
-          margin-top: 2rem;
-          padding-top: 2rem;
-          border-top: 1px solid rgba(255, 255, 255, 0.1);
-        "
-      >
-        <p>&copy; 2026 Skip Systems. Tutti i diritti riservati.</p>
       </div>
     </footer>
 
     <script>
-      // ===== MODE TABS =====
+      // ===== ANNO CORRENTE =====
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // ===== MENU MOBILE =====
+      const navToggle = document.getElementById("nav-toggle");
+      const navMenu = document.getElementById("nav-menu");
+
+      const closeMenu = () => {
+        navMenu.classList.remove("open");
+        navToggle.classList.remove("open");
+        navToggle.setAttribute("aria-expanded", "false");
+      };
+
+      navToggle.addEventListener("click", () => {
+        const open = navMenu.classList.toggle("open");
+        navToggle.classList.toggle("open", open);
+        navToggle.setAttribute("aria-expanded", String(open));
+      });
+
+      navMenu.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", closeMenu);
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeMenu();
+      });
+
+      // ===== HEADER COMPATTO ALLO SCROLL =====
+      const header = document.getElementById("site-header");
+      const onScroll = () => {
+        header.classList.toggle("scrolled", window.scrollY > 12);
+      };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      // ===== EVIDENZA SEZIONE ATTIVA =====
+      const sections = Array.from(
+        document.querySelectorAll("main section[id]"),
+      ).filter((s) => document.querySelector('.nav-links a[href="#' + s.id + '"]'));
+
+      if ("IntersectionObserver" in window && sections.length) {
+        const navObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              document
+                .querySelectorAll(".nav-links a")
+                .forEach((a) => a.classList.remove("active"));
+              const link = document.querySelector(
+                '.nav-links a[href="#' + entry.target.id + '"]',
+              );
+              if (link) link.classList.add("active");
+            });
+          },
+          { rootMargin: "-45% 0px -50% 0px" },
+        );
+        sections.forEach((s) => navObserver.observe(s));
+      }
+
+      // ===== ANIMAZIONI DI INGRESSO =====
+      const prefersReduced = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
+
+      if (!prefersReduced && "IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("visible");
+              obs.unobserve(entry.target);
+            });
+          },
+          { threshold: 0.12 },
+        );
+        document
+          .querySelectorAll(".reveal")
+          .forEach((el) => revealObserver.observe(el));
+      } else {
+        document
+          .querySelectorAll(".reveal")
+          .forEach((el) => el.classList.add("visible"));
+      }
+
+      // ===== TAB MODALITÀ DI SERVIZIO =====
       document.querySelectorAll(".mode-tab").forEach((tab) => {
         tab.addEventListener("click", () => {
           const mode = tab.dataset.mode;
 
-          document
-            .querySelectorAll(".mode-tab")
-            .forEach((t) => t.classList.remove("active"));
+          document.querySelectorAll(".mode-tab").forEach((t) => {
+            t.classList.remove("active");
+            t.setAttribute("aria-selected", "false");
+          });
           document
             .querySelectorAll(".mode-panel")
             .forEach((p) => p.classList.remove("active"));
 
           tab.classList.add("active");
+          tab.setAttribute("aria-selected", "true");
           document.getElementById("mode-" + mode).classList.add("active");
         });
       });
 
-      // ===== CAROUSEL HANDLER =====
+      // ===== CAROSELLI =====
       document.querySelectorAll(".carousel").forEach((carousel) => {
         const wrapper = carousel.closest(".carousel-wrapper");
         const dots = wrapper.querySelectorAll(".nav-dot");
@@ -476,69 +1375,103 @@
         const prevBtn = wrapper.querySelector(".prev");
         const nextBtn = wrapper.querySelector(".next");
 
-        const updateDots = () => {
-          const carouselRect = carousel.getBoundingClientRect();
-          let maxVisibleWidth = 0;
-          let activeIndex = 0;
+        if (items.length < 2) {
+          if (prevBtn) prevBtn.remove();
+          if (nextBtn) nextBtn.remove();
+        }
 
+        const activeIndex = () => {
+          const rect = carousel.getBoundingClientRect();
+          let maxVisible = 0;
+          let index = 0;
           items.forEach((item, i) => {
-            const itemRect = item.getBoundingClientRect();
-            const visibleLeft = Math.max(carouselRect.left, itemRect.left);
-            const visibleRight = Math.min(carouselRect.right, itemRect.right);
-            const visibleWidth = Math.max(0, visibleRight - visibleLeft);
-
-            if (visibleWidth > maxVisibleWidth) {
-              maxVisibleWidth = visibleWidth;
-              activeIndex = i;
+            const r = item.getBoundingClientRect();
+            const visible = Math.max(
+              0,
+              Math.min(rect.right, r.right) - Math.max(rect.left, r.left),
+            );
+            if (visible > maxVisible) {
+              maxVisible = visible;
+              index = i;
             }
           });
+          return index;
+        };
 
-          dots.forEach((dot, i) => {
-            dot.classList.toggle("active", i === activeIndex);
-          });
+        const updateDots = () => {
+          const index = activeIndex();
+          dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
         };
 
         const scrollToIndex = (index) => {
           const item = items[index];
           if (!item) return;
-          const scrollPos = item.offsetLeft - carousel.offsetLeft;
           carousel.scrollTo({
-            left: scrollPos,
-            behavior: "smooth",
+            left: item.offsetLeft - carousel.offsetLeft,
+            behavior: prefersReduced ? "auto" : "smooth",
           });
         };
 
-        carousel.addEventListener("scroll", updateDots);
+        carousel.addEventListener("scroll", updateDots, { passive: true });
         window.addEventListener("resize", updateDots);
 
-        dots.forEach((dot, i) => {
-          dot.addEventListener("click", () => {
-            scrollToIndex(i);
-          });
-        });
+        dots.forEach((dot, i) => dot.addEventListener("click", () => scrollToIndex(i)));
 
         if (prevBtn) {
           prevBtn.addEventListener("click", () => {
-            const currentIndex = Array.from(dots).findIndex((dot) =>
-              dot.classList.contains("active"),
-            );
-            if (currentIndex > 0) scrollToIndex(currentIndex - 1);
-            else scrollToIndex(items.length - 1);
+            const i = activeIndex();
+            scrollToIndex(i > 0 ? i - 1 : items.length - 1);
           });
         }
 
         if (nextBtn) {
           nextBtn.addEventListener("click", () => {
-            const currentIndex = Array.from(dots).findIndex((dot) =>
-              dot.classList.contains("active"),
-            );
-            if (currentIndex < items.length - 1)
-              scrollToIndex(currentIndex + 1);
-            else scrollToIndex(0);
+            const i = activeIndex();
+            scrollToIndex(i < items.length - 1 ? i + 1 : 0);
           });
         }
 
         updateDots();
+      });
+
+      // ===== FORM CONTATTI (compone una email) =====
+      const form = document.getElementById("contact-form");
+      const status = document.getElementById("form-status");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        const get = (name) => form.elements[name].value.trim();
+        const nome = get("nome");
+        const locale = get("locale");
+
+        const corpo = [
+          "Nome e cognome: " + nome,
+          "Locale: " + locale,
+          "Email: " + get("email"),
+          "Telefono: " + (get("telefono") || "—"),
+          "Interesse: " + get("interesse"),
+          "",
+          "Messaggio:",
+          get("messaggio") || "—",
+        ].join("\n");
+
+        const url =
+          "mailto:queueservicerestaurant@gmail.com" +
+          "?subject=" +
+          encodeURIComponent("Richiesta demo SKIP orders — " + locale) +
+          "&body=" +
+          encodeURIComponent(corpo);
+
+        window.location.href = url;
+
+        status.textContent =
+          "Abbiamo aperto il tuo programma di posta con il messaggio pronto. Se non si apre, scrivici direttamente a queueservicerestaurant@gmail.com.";
       });
     </script>
   </body>

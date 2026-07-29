@@ -1,25 +1,77 @@
-# QFlow Promotional Website
+# SKIP orders — sito promozionale
 
-Questo è il sito web promozionale per la soluzione "QFlow" (Saltacoda).
+Sito statico di presentazione della piattaforma **SKIP orders** (progetto QSR),
+pubblicato su GitHub Pages.
 
 ## Struttura
 
-- `index.html`: La pagina principale.
-- `style.css`: Stili che utilizzano la palette colori del brand QSR.
-- `assets/`: Immagini e loghi copiati dal progetto principale.
+| File / cartella        | Contenuto                                                                   |
+| ---------------------- | --------------------------------------------------------------------------- |
+| `index.html`           | Landing page (hero, funzionalità, come funziona, piattaforma, FAQ, contatti) |
+| `style.css`            | Foglio di stile unico, usato anche dalle pagine legali                      |
+| `privacy.html`         | Informativa sulla Privacy — **generata**, non modificare a mano             |
+| `termini.html`         | Termini e Condizioni per gli Esercenti — **generata**                       |
+| `cookie.html`          | Cookie Policy — **generata**                                                |
+| `tools/build-legal.js` | Generatore delle tre pagine legali                                          |
+| `assets/images/`       | Logo, icone e screenshot dell'applicazione                                  |
 
-## Come usarlo
+Nessuna dipendenza e nessun build step per la landing page: è HTML, CSS e
+JavaScript vanilla. Per l'anteprima basta aprire `index.html` nel browser.
 
-1. Poiché questo è un sito statico, puoi aprire direttamente `index.html` nel tuo browser per vederne l'anteprima.
-2. Per caricarlo su GitHub come nuovo repository:
-   - Crea un nuovo repo su GitHub.
-   - Inizializza git in questa cartella (`git init`).
-   - Aggiungi i file (`git add .`).
-   - Fai commit (`git commit -m "Initial commit"`).
-   - Aggiungi il remote (`git remote add origin <url-tuo-repo>`).
-   - Fai push (`git push -u origin master`).
+## Pagine legali
 
-## Colori Brand
+I testi legali **non sono scritti qui**: sono copiati dal documento canonico del
+prodotto, in modo che sito e applicazione non divergano.
 
-- Primary: #0b2f42
-- Secondary: #d97706
+Sorgente: `<repo-QSR>/libs/src/lib/core/legal/legal-content.ts`
+
+Quando quei documenti cambiano, rigenera le pagine:
+
+```sh
+node tools/build-legal.js
+# oppure, se il repo QSR non si trova in ../../QSR/qsr:
+node tools/build-legal.js C:/progetti/QSR/qsr
+```
+
+Lo script si ferma di proposito se incontra un segnaposto `${...}` che non sa
+risolvere, per evitare di pubblicare testo grezzo in una pagina legale.
+
+## Loghi
+
+Il logo del sito deriva dall'icona ufficiale dell'app
+(`<repo-QSR>/assets/icon-only.png`), che ha già lo sfondo trasparente.
+
+| File                       | Uso                               |
+| -------------------------- | --------------------------------- |
+| `skip-logo-lockup.png`     | Logo esteso: header, hero, footer |
+| `skip-mark-512/180/32.png` | Solo simbolo: favicon e icona iOS |
+| `og-image.png`             | Anteprima per i social (1200×630) |
+
+## Illustrazioni
+
+`stampa-comanda-banco.svg` e `stampa-comanda-tavolo.svg` sono due SVG scritti a
+mano (nessuna dipendenza, nessun font esterno) che mostrano la stampante di
+cucina con la comanda in uscita. Le due varianti differiscono solo per
+l'etichetta stampata sulla comanda — `BANCO` oppure `TAVOLO 4` — così ogni
+passaggio di "Come funziona" mostra il caso corretto.
+
+## Contatti pubblicati sul sito
+
+- Email: queueservicerestaurant@gmail.com
+- Telefono / WhatsApp: +39 329 534 3049
+
+Il form contatti non ha backend: compone un messaggio `mailto:` già pronto da
+inviare. Per raccogliere i contatti in modo automatico serve un servizio esterno
+(es. Formspree, Netlify Forms) oppure una Cloud Function.
+
+## Palette
+
+Derivata dal logo:
+
+| Ruolo      | Valore    |
+| ---------- | --------- |
+| Navy scuro | `#06172b` |
+| Navy       | `#0b2540` |
+| Blu        | `#1668c9` |
+| Blu chiaro | `#2f86ef` |
+| Ciano      | `#35c8ef` |
